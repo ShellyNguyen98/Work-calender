@@ -32,9 +32,6 @@
 //     }
 // }
 
-// checkTime = {}
-
-
 // $('.saveBtn').click(function() {
 //     // target the text area using sibbling
 //         let value  = $(this).siblings(`.description`).val()
@@ -47,23 +44,23 @@
 $(document).ready(function (){
 
     $(".saveBtn").click(function() {
-        let value = $(this).siblings(".description").val()
-        console.log(value)
-        let time = $(this).parents().attr("id")
-        console.log(time)
+        let clock = $(this).siblings(".description").val()
+        console.log(clock)
+        let minute = $(this).parents().attr("id")
+        console.log(minute)
 
-        localStorage.setItem(time, value)
+        localStorage.setItem(clock,minute)
     })
 
-    $("#9").val(localStorage.getItem("9"))
-    $("#10").val(localStorage.getItem("10"))
-    $("#11").val(localStorage.getItem("11"))
-    $("#12").val(localStorage.getItem("12"))
-    $("#13").val(localStorage.getItem("13"))
-    $("#14").val(localStorage.getItem("14"))
-    $("#15").val(localStorage.getItem("15"))
-    $("#16").val(localStorage.getItem("16"))
-    $("#17").val(localStorage.getItem("17"))
+    $("#9 .description").val(localStorage.getItem("9"))
+    $("#10 .description").val(localStorage.getItem("10"))
+    $("#11 .description").val(localStorage.getItem("11"))
+    $("#12 .description").val(localStorage.getItem("12"))
+    $("#13 .description").val(localStorage.getItem("13"))
+    $("#14 .description").val(localStorage.getItem("14"))
+    $("#15 .description").val(localStorage.getItem("15"))
+    $("#16 .description").val(localStorage.getItem("16"))
+    $("#17 .description").val(localStorage.getItem("17"))
 
     let currentHour = parseInt(moment().format("H"))
 
@@ -78,4 +75,6 @@ $(document).ready(function (){
         }
 
     })
+
+
 })
