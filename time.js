@@ -43,12 +43,12 @@
 $(document).ready(function (){
 
     $(".saveBtn").click(function() {
-        let value = $(this).siblings(".description").val()
-        console.log(value)
-        let time = $(this).parents().attr("id")
-        console.log(time)
+        let clock = $(this).siblings(".description").val()
+        console.log(clock)
+        let minute = $(this).parents().attr("id")
+        console.log(minute)
 
-        localStorage.setItem(time, value)
+        localStorage.setItem(minute, clock)
     })
 
     $("#9 .description").val(localStorage.getItem("9"))
