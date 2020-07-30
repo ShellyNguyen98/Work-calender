@@ -1,6 +1,6 @@
-// $('#currentDay').text(`
-//     ${moment().format('MMMM Do YYYY')}
-// `)
+$('#currentDay').text(`
+    ${moment().format('MMMM Do YYYY')}
+`)
 
 
 // $('#9').val(localStorage.getItem('9'))
