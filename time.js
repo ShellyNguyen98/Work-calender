@@ -40,16 +40,15 @@
 // }
 
 // )
-
 $(document).ready(function (){
 
     $(".saveBtn").click(function() {
-        let clock = $(this).siblings(".description").val()
-        console.log(clock)
-        let minute = $(this).parents().attr("id")
-        console.log(minute)
+        let value = $(this).siblings(".description").val()
+        console.log(value)
+        let time = $(this).parents().attr("id")
+        console.log(time)
 
-        localStorage.setItem(clock,minute)
+        localStorage.setItem(time, value)
     })
 
     $("#9 .description").val(localStorage.getItem("9"))
